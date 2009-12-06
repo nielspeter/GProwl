@@ -1,0 +1,11 @@
+A Groovy Prowl wrapper
+
+
+--- verify api key ---
+
+println Prowl.verify("your_api_key")
+
+
+--- send event ---
+
+println Prowl.add("your_api_key", "my-app", "my-event", "my-description")

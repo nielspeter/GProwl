@@ -7,7 +7,7 @@ class Prowl {
   }
 
   static verify(apikey) {
-    send("https://prowl.weks.net/publicapi/verify?apikey=${apikey}")
+    send "https://prowl.weks.net/publicapi/verify?apikey=${apikey}"
   }
 
   static send(url) {

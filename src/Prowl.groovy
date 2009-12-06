@@ -11,7 +11,7 @@ class Prowl {
   }
 
   static send(url) {
-    Expando result = new Expando()
+    def result = new Expando()
     try {
       def prowl = new XmlParser().parseText(url.toURL().text)
       result.remaining = prowl.success[0].@remaining
@@ -27,7 +27,7 @@ class Prowl {
 }
 
 class StringCategory {
-  static String encode(string) {
-    return URLEncoder.encode(string, "UTF-8")
+  static encode(string) {
+    URLEncoder.encode(string, "UTF-8")
   }
 }

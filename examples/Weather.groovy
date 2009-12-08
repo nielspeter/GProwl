@@ -13,7 +13,7 @@ def temp = rss.channel.item[yweather.condition].@temp[0]
 
 // if cold - icy roads - prowl me
 if (Integer.parseInt(temp) < 2) {
-  def result = Prowl.add("your_api_key", "Weather", "Varning", "Icy roads. The current temperature is ${temp}", 1)
+  def result = Prowl.add("your_api_key", "Weather", "Warning!", "Icy roads. The current temperature is ${temp}", 1)
 
   if (result.success)
     println "Prowl sendt!"
